@@ -8,6 +8,11 @@ Foi feito **somente com HTML5, CSS3 e JavaScript puro**: sem bibliotecas, framew
 
 Dê dois cliques em `index.html`. Não precisa de servidor nem de instalação.
 
+Ou então
+
+link: 
+flow3600.netlify.app
+
 Usuários de teste (senha `123` para todos). Há um usuário por cargo (role). No login, a pessoa informa só o e-mail e a senha, e o cargo vem do cadastro:
 
 | E-mail (login) | Nome | Cargo |
