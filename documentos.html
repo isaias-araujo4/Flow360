@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentos — Flow360</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+    <main class="conteudo" id="conteudo">
+      <div class="cabecalho-pagina">
+        <h1 class="titulo-pagina">Documentos</h1>
+      </div>
+
+      <section class="cartao">
+        <form id="form-filtros" class="grade-campos" style="margin-bottom:0">
+          <div class="campo">
+            <label for="f-empresa">Empresa</label>
+            <select class="selecao" id="f-empresa"></select>
+          </div>
+          <div class="campo">
+            <label for="f-competencia">Competência</label>
+            <select class="selecao" id="f-competencia"></select>
+          </div>
+          <div class="campo">
+            <label for="f-colaborador">Colaborador</label>
+            <select class="selecao" id="f-colaborador"></select>
+          </div>
+          <div class="campo">
+            <label for="f-status">Status</label>
+            <select class="selecao" id="f-status"></select>
+          </div>
+          <div class="campo">
+            <label for="f-prazo">Prazo</label>
+            <select class="selecao" id="f-prazo"></select>
+          </div>
+          <div class="campo" style="justify-content:flex-end">
+            <div class="acoes" style="min-height:50px">
+              <button class="btn" type="submit">Filtrar</button>
+              <button class="btn" type="button" id="btn-limpar">Limpar filtros</button>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <section class="cartao">
+        <div class="cabecalho-pagina" style="margin-bottom:8px">
+          <h2 class="cartao-titulo" style="margin:0">Documentos da operação</h2>
+          <span class="texto-suave" id="contagem"></span>
+        </div>
+        <div id="tabela-documentos"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/dados.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/paginas/documentos.js"></script>
+</body>
+</html>

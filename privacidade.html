@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacidade — Flow360</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="pagina-login">
+  <header class="topo">
+    <a class="logo" href="index.html"><span>Flow</span>360</a>
+  </header>
+
+  <div class="login-area">
+    <main class="conteudo" style="max-width:900px;margin:0 auto;padding-top:20px">
+      <a class="btn-link" href="index.html" id="link-voltar">« Voltar</a>
+      <h1 class="titulo-pagina" style="margin:6px 0 16px">Privacidade</h1>
+
+      <section class="cartao">
+        <h2 class="cartao-titulo">Como o Flow360 trata seus dados</h2>
+        <p>O Flow360 organiza documentos trabalhistas de empresas terceirizadas (folhas de pagamento, guias, kits demissionais etc.) para conferência pelo cliente contratante, em linha com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018).</p>
+        <h3>Quais dados usamos</h3>
+        <ul>
+          <li>Nome, login e cargo de quem acessa o sistema;</li>
+          <li>Dados cadastrais de empresas, clientes, unidades e colaboradores;</li>
+          <li>Os documentos enviados e o histórico de ações sobre eles.</li>
+        </ul>
+        <h3>Para que usamos</h3>
+        <ul>
+          <li>Conferir se a documentação obrigatória foi entregue no prazo;</li>
+          <li>Registrar quem enviou, aprovou ou recusou cada documento;</li>
+          <li>Gerar relatórios para a gestão do contrato.</li>
+        </ul>
+        <h3>Onde ficam os dados nesta versão</h3>
+        <p>Esta é uma versão acadêmica. Todos os dados ficam guardados somente neste navegador (localStorage) e não são enviados para nenhum servidor.</p>
+      </section>
+
+      <section class="cartao">
+        <h2 class="cartao-titulo">Apagar dados deste navegador</h2>
+        <p class="cartao-subtitulo">Remove tudo o que foi salvo e volta aos dados de exemplo.</p>
+        <button class="btn btn-perigo" type="button" id="btn-apagar">Apagar meus dados</button>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/dados.js"></script>
+  <script src="js/ui.js"></script>
+  <script>
+    // Se estiver logado, o "Voltar" leva ao painel
+    if (Sessao.usuario()) {
+      UI.$('#link-voltar').href = 'painel.html';
+      UI.$('#link-voltar').textContent = '« Voltar ao sistema';
+    }
+    UI.$('#btn-apagar').addEventListener('click', async () => {
+      if (await UI.confirmar('Apagar dados', 'Todos os cadastros, documentos e o histórico salvos neste navegador serão apagados.', 'Apagar', true)) {
+        DB.restaurar();
+        UI.aviso('sucesso', 'Dados apagados', 'O navegador voltou aos dados de exemplo.', () => { location.href = 'index.html'; });
+      }
+    });
+  </script>
+</body>
+</html>

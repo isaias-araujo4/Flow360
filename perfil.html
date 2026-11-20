@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil e sessão — Flow360</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+    <main class="conteudo" id="conteudo">
+      <div class="cabecalho-pagina">
+        <h1 class="titulo-pagina">Perfil e sessão</h1>
+      </div>
+
+      <section class="cartao">
+        <div class="acoes" style="gap:18px;margin-bottom:18px">
+          <span class="avatar" style="width:72px;height:72px;cursor:default" id="perfil-avatar"></span>
+          <div>
+            <h2 class="cartao-titulo" style="margin:0" id="perfil-nome"></h2>
+            <p class="texto-suave" style="margin:4px 0 0" id="perfil-login"></p>
+          </div>
+        </div>
+        <dl class="info-grade" id="perfil-dados"></dl>
+        <hr class="separador">
+        <div class="acoes">
+          <button class="btn" type="button" id="btn-senha">Alterar senha</button>
+          <a class="btn" href="privacidade.html">Privacidade</a>
+          <button class="btn btn-perigo" type="button" id="btn-sair"></button>
+        </div>
+      </section>
+
+      <section class="cartao">
+        <h2 class="cartao-titulo">Minhas últimas ações</h2>
+        <div id="tabela-acoes"></div>
+      </section>
+
+      <section class="cartao">
+        <h2 class="cartao-titulo">Dados de demonstração</h2>
+        <p class="cartao-subtitulo">Os dados do Flow360 ficam salvos no navegador (localStorage). Restaurar apaga tudo o que foi cadastrado e volta aos exemplos iniciais.</p>
+        <button class="btn" type="button" id="btn-restaurar">Restaurar dados de exemplo</button>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/dados.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/paginas/perfil.js"></script>
+</body>
+</html>

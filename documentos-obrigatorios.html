@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentos Obrigatórios — Flow360</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-cadastro="documentos-obrigatorios">
+  <div class="app">
+    <main class="conteudo" id="conteudo">
+      <div class="cabecalho-pagina">
+        <h1 class="titulo-pagina">Documentos Obrigatórios</h1>
+      </div>
+
+      <section class="cartao">
+        <h2 class="cartao-titulo" id="titulo-form">Novo registro</h2>
+        <form id="form-cadastro" novalidate>
+          <div class="grade-campos" id="campos"></div>
+          <p class="erro-campo" id="erro-form" role="alert"></p>
+          <div class="acoes">
+            <button class="btn" type="submit" id="btn-salvar">Salvar cadastro</button>
+            <button class="btn" type="button" id="btn-cancelar">Cancelar</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="cartao">
+        <h2 class="cartao-titulo">Registros cadastrados</h2>
+        <div id="tabela-registros"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/dados.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/paginas/cadastros.js"></script>
+</body>
+</html>

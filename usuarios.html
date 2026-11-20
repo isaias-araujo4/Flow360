@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usuários — Flow360</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+    <main class="conteudo" id="conteudo">
+      <div class="cabecalho-pagina">
+        <h1 class="titulo-pagina">Usuários</h1>
+      </div>
+
+      <section class="cartao">
+        <h2 class="cartao-titulo">Usuários e permissões</h2>
+        <div class="acoes" style="margin-bottom:16px">
+          <button class="btn" type="button" id="btn-novo">Novo usuário</button>
+          <a class="btn" href="permissoes.html">Matriz de acesso</a>
+        </div>
+
+        <div class="grade-campos">
+          <div class="campo">
+            <label for="u-busca">Filtrar usuário</label>
+            <input class="entrada" id="u-busca" type="search" placeholder="Nome ou e-mail">
+          </div>
+          <div class="campo">
+            <label for="u-cargo">Cargo</label>
+            <select class="selecao" id="u-cargo"></select>
+          </div>
+          <div class="campo">
+            <label for="u-acesso">Acesso</label>
+            <select class="selecao" id="u-acesso"></select>
+          </div>
+        </div>
+
+        <div id="tabela-usuarios"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/dados.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/paginas/usuarios.js"></script>
+</body>
+</html>

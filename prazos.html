@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prazos e alertas — Flow360</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+    <main class="conteudo" id="conteudo">
+      <div class="cabecalho-pagina">
+        <h1 class="titulo-pagina">Prazos e alertas</h1>
+      </div>
+
+      <section class="cartao">
+        <h2 class="cartao-titulo">Próximos do vencimento</h2>
+        <div id="tabela-proximos"></div>
+
+        <h2 class="cartao-titulo" style="margin-top:22px">Documentos vencidos</h2>
+        <div id="tabela-vencidos"></div>
+
+        <h2 class="cartao-titulo" style="margin-top:22px">Prazo de envio</h2>
+        <div id="tabela-competencias"></div>
+
+        <div class="acoes" style="margin-top:16px">
+          <a class="btn" href="enviar.html" id="btn-enviar">Enviar documentação</a>
+          <a class="btn" href="pendencias.html">Acompanhar pendências</a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/dados.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/paginas/prazos.js"></script>
+</body>
+</html>

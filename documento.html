@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documento — Flow360</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+    <main class="conteudo" id="conteudo">
+      <a class="btn-link" href="documentos.html">« Voltar à lista</a>
+      <div class="cabecalho-pagina" style="margin-top:6px">
+        <h1 class="titulo-pagina">Documento</h1>
+        <span id="etiqueta-status"></span>
+      </div>
+
+      <!-- T23: dados do documento -->
+      <section class="cartao" id="cartao-documento">
+        <h2 class="cartao-titulo" id="titulo-documento">Documento</h2>
+        <div class="grade-campos" id="detalhes"></div>
+        <div class="acoes" id="acoes-documento"></div>
+      </section>
+
+      <!-- T23: motivo da recusa -->
+      <section class="cartao oculto" id="cartao-recusa">
+        <h2 class="cartao-titulo">Motivo da recusa</h2>
+        <p id="texto-recusa"></p>
+        <p class="cartao-subtitulo" id="origem-recusa"></p>
+        <div class="acoes" id="acoes-recusa"></div>
+      </section>
+
+      <!-- T25: histórico do documento -->
+      <section class="cartao" id="cartao-historico">
+        <h2 class="cartao-titulo">Histórico do documento</h2>
+        <h3 class="cartao-subtitulo" style="margin:-6px 0 4px">Alterações, envios e visualizações</h3>
+        <p class="texto-suave" id="ultima-acao-doc" style="margin:0 0 10px"></p>
+        <div id="tabela-historico"></div>
+        <div class="acoes" style="margin-top:14px">
+          <button class="btn" type="button" id="btn-versao-anterior">Consultar versão anterior</button>
+          <button class="btn" type="button" id="btn-voltar-doc">Voltar ao documento</button>
+        </div>
+      </section>
+
+      <div class="grade-2">
+        <section class="cartao">
+          <h2 class="cartao-titulo">Versões do arquivo</h2>
+          <div id="tabela-versoes"></div>
+        </section>
+        <section class="cartao">
+          <h2 class="cartao-titulo">Pendências deste documento</h2>
+          <div id="tabela-pendencias"></div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/dados.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/paginas/documento.js"></script>
+</body>
+</html>

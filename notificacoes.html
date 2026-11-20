@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notificações — Flow360</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+    <main class="conteudo" id="conteudo">
+      <div class="cabecalho-pagina">
+        <h1 class="titulo-pagina">Notificações</h1>
+        <button class="btn" type="button" id="btn-marcar">Marcar todas como lidas</button>
+      </div>
+
+      <section class="cartao">
+        <div class="abas">
+          <button class="btn" type="button" data-filtro="todas">Todas</button>
+          <button class="btn" type="button" data-filtro="naolidas">Não lidas</button>
+          <button class="btn" type="button" data-filtro="lidas">Lidas</button>
+        </div>
+        <div id="lista-notificacoes" style="border:1px solid var(--borda-clara);border-radius:8px;overflow:hidden"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/dados.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/paginas/notificacoes.js"></script>
+</body>
+</html>

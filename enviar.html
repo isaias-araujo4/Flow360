@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enviar documentação — Flow360</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+    <main class="conteudo" id="conteudo">
+      <div class="cabecalho-pagina">
+        <h1 class="titulo-pagina" id="titulo-envio">Enviar Documentação</h1>
+      </div>
+
+      <!-- Etapas -->
+      <ol class="etapas" id="etapas" style="list-style:none;padding:0">
+        <li class="etapa" data-etapa="documentos">1. Documentos</li>
+        <li class="etapa" data-etapa="auditoria">2. Pré-auditoria</li>
+        <li class="etapa" data-etapa="enviado">3. Envio</li>
+      </ol>
+
+      <!-- ETAPA 1: seleção e anexos -->
+      <section id="etapa-documentos">
+        <div class="cartao">
+          <div class="grade-campos">
+            <div class="campo">
+              <label for="sel-unidade">Unidade (filial)</label>
+              <select class="selecao" id="sel-unidade"></select>
+            </div>
+            <div class="campo">
+              <label for="sel-competencia">Competência</label>
+              <select class="selecao" id="sel-competencia"></select>
+            </div>
+            <div class="campo">
+              <label for="sel-situacao">Situação</label>
+              <select class="selecao" id="sel-situacao"></select>
+            </div>
+            <div class="campo oculto" id="campo-colaborador">
+              <label for="sel-colaborador">Colaborador</label>
+              <select class="selecao" id="sel-colaborador"></select>
+            </div>
+          </div>
+          <div class="lista-chips" id="chips-vinculo"></div>
+        </div>
+
+        <div class="cartao oculto" id="cartao-anexos">
+          <h2 class="cartao-titulo" id="titulo-anexos">Documentos obrigatórios</h2>
+          <p class="etiqueta alerta oculto" id="aviso-alteracao" style="margin:0 0 12px">
+            Houve alterações desde a última verificação. Execute a pré-auditoria novamente antes de enviar.
+          </p>
+          <p class="cartao-subtitulo">Formatos aceitos: PDF, PNG ou JPG. Anexe um arquivo para cada documento exigido.</p>
+          <div class="lista-anexos" id="lista-anexos"></div>
+          <div class="acoes" style="margin-top:18px">
+            <button class="btn btn-primario" type="button" id="btn-auditar">Executar pré-auditoria</button>
+            <button class="btn" type="button" id="btn-limpar">Limpar envio</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ETAPA 2: pré-auditoria -->
+      <section id="etapa-auditoria" class="oculto">
+        <div class="cartao" id="auditoria-andamento">
+          <h2 class="cartao-titulo">Conferindo a documentação</h2>
+          <p class="cartao-subtitulo" id="auditoria-passo">Comparando arquivos e cadastros da operação.</p>
+          <div class="progresso"><div class="progresso-barra" id="auditoria-barra"></div></div>
+          <div id="tabela-conferencia"></div>
+        </div>
+        <div class="cartao oculto" id="auditoria-resultado"></div>
+      </section>
+
+      <!-- ETAPA 3: envio confirmado -->
+      <section id="etapa-enviado" class="oculto">
+        <div class="cartao" id="envio-confirmado"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/dados.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/paginas/enviar.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel geral — Flow360</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+    <main class="conteudo" id="conteudo">
+      <div class="cabecalho-pagina">
+        <h1 class="titulo-pagina caixa-alta">Painel geral</h1>
+        <a class="btn" href="enviar.html" id="btn-enviar"><span class="icone-btn"></span>Enviar documentação</a>
+      </div>
+
+      <div class="grade-2">
+        <section class="cartao">
+          <div class="painel-total">
+            <div>
+              <div class="numero" id="total-documentos">0</div>
+              <div class="rotulo-total">Documentos totais</div>
+            </div>
+            <div class="legenda">
+              <span><span class="cor" style="background:var(--marrom)"></span>Próximos do prazo: <a href="documentos.html?prazo=proximos" id="qtd-proximos">0</a></span>
+              <span></span>
+              <span><span class="cor" style="background:#9be8a8"></span>Aprovados: <a href="documentos.html?status=Aprovado" id="qtd-aprovados">0</a></span>
+              <span><span class="cor" style="background:#fff09a"></span>Pendentes: <a href="documentos.html?status=Pendente" id="qtd-pendentes">0</a></span>
+            </div>
+          </div>
+        </section>
+
+        <section class="cartao cartao-recusados">
+          <h2>Documentos recusados</h2>
+          <div class="numero" id="qtd-recusados">0</div>
+          <a class="verificar" href="documentos.html?status=Recusado">verificar »</a>
+        </section>
+      </div>
+
+      <div class="grade-2">
+        <section class="cartao">
+          <h2 class="cartao-titulo">Alertas</h2>
+
+          <div class="bloco-alerta">
+            <h3>Próximos do vencimento</h3>
+            <div id="alertas-proximos"></div>
+          </div>
+
+          <div class="bloco-alerta">
+            <h3>Vencidos</h3>
+            <div id="alertas-vencidos"></div>
+          </div>
+
+          <div class="bloco-alerta">
+            <h3>Prazos de envio</h3>
+            <div id="alertas-prazos"></div>
+          </div>
+        </section>
+
+        <section class="cartao">
+          <h2 class="cartao-titulo">Pendências</h2>
+          <div id="lista-pendencias"></div>
+          <div class="acoes" style="margin-top:22px">
+            <a class="btn" href="pendencias.html">Ver todas as pendências »</a>
+            <a class="btn" href="prazos.html">Prazos e alertas</a>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/dados.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/paginas/painel.js"></script>
+</body>
+</html>

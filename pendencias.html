@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pendências — Flow360</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+    <main class="conteudo" id="conteudo">
+      <div class="cabecalho-pagina">
+        <h1 class="titulo-pagina">Pendências</h1>
+      </div>
+
+      <section class="cartao">
+        <h2 class="cartao-titulo" id="titulo-lista">Pendências abertas</h2>
+
+        <div class="abas" role="tablist">
+          <button class="btn" type="button" role="tab" data-aba="abertas">Abertas</button>
+          <button class="btn" type="button" role="tab" data-aba="resolvidas">Resolvidas</button>
+          <button class="btn" type="button" role="tab" data-aba="todas">Todas</button>
+        </div>
+
+        <div class="grade-campos">
+          <div class="campo">
+            <label for="f-origem">Origem</label>
+            <select class="selecao" id="f-origem"></select>
+          </div>
+          <div class="campo">
+            <label for="f-motivo">Motivo</label>
+            <select class="selecao" id="f-motivo"></select>
+          </div>
+        </div>
+
+        <div id="tabela-pendencias"></div>
+
+        <div class="acoes" style="margin-top:16px">
+          <a class="btn" href="prazos.html">Prazos e alertas</a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/dados.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/paginas/pendencias.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Permissões de acesso — Flow360</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+    <main class="conteudo" id="conteudo">
+      <div class="cabecalho-pagina">
+        <h1 class="titulo-pagina">Permissões de acesso</h1>
+      </div>
+
+      <!-- T32: matriz de acesso aos documentos -->
+      <section class="cartao">
+        <h2 class="cartao-titulo">Matriz de acesso aos documentos</h2>
+        <div id="tabela-acesso"></div>
+        <div class="acoes" style="margin-top:16px">
+          <a class="btn" href="usuarios.html">Gerenciar usuários</a>
+          <a class="btn" href="privacidade.html">Privacidade</a>
+        </div>
+      </section>
+
+      <section class="cartao">
+        <h2 class="cartao-titulo">Telas liberadas por cargo</h2>
+        <p class="cartao-subtitulo">Marque quais telas cada cargo pode acessar. O acesso do Diretor a Usuários não pode ser removido.</p>
+        <div id="tabela-permissoes"></div>
+        <div class="acoes" style="margin-top:16px">
+          <button class="btn btn-primario" type="button" id="btn-salvar">Salvar permissões</button>
+          <button class="btn" type="button" id="btn-padrao">Restaurar padrão</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/dados.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/paginas/permissoes.js"></script>
+</body>
+</html>

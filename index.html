@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — Flow360</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="pagina-login">
+  <header class="topo">
+    <a class="logo" href="index.html"><span>Flow</span>360</a>
+  </header>
+
+  <div class="login-area">
+    <main class="login-fundo">
+      <section class="login-cartao">
+        <h1 class="logo login-logo"><span>Flow</span>360</h1>
+
+        <form class="login-form" id="form-login" novalidate>
+          <label for="login-usuario">E-mail</label>
+          <input class="entrada" id="login-usuario" name="usuario" type="email" autocomplete="username" placeholder="nome@gmail.com">
+
+          <label for="login-senha">Senha</label>
+          <input class="entrada" id="login-senha" name="senha" type="password" autocomplete="current-password">
+
+          <p class="erro-campo" id="login-erro" role="alert" style="margin-left:20px"></p>
+
+          <button class="login-entrar" type="submit">Entrar</button>
+        </form>
+
+        <a class="btn login-privacidade" href="privacidade.html">Privacidade</a>
+
+        <p class="login-dica">
+          Usuários de teste (senha <strong>123</strong>):<br>
+          ricardo@gmail.com (Diretor) · marcos@gmail.com (Gerente)<br>
+          patricia@gmail.com (Coordenador) · bruno@gmail.com (Supervisor)<br>
+          juliana@gmail.com (Analista) · fernanda@gmail.com (Assistente)<br>
+          lucas@gmail.com (Jovem Aprendiz) · camila@gmail.com (Estagiário)<br>
+          rafael@gmail.com (inativo)
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/dados.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/paginas/login.js"></script>
+</body>
+</html>

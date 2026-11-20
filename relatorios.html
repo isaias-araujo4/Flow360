@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relatórios — Flow360</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+    <main class="conteudo" id="conteudo">
+      <div class="cabecalho-pagina">
+        <h1 class="titulo-pagina">Relatórios</h1>
+      </div>
+
+      <section class="cartao">
+        <h2 class="cartao-titulo">Situação das documentações</h2>
+        <form id="form-relatorio">
+          <div class="grade-campos">
+            <div class="campo">
+              <label for="r-empresa">Empresa</label>
+              <select class="selecao" id="r-empresa"></select>
+            </div>
+            <div class="campo">
+              <label for="r-competencia">Competência</label>
+              <select class="selecao" id="r-competencia"></select>
+            </div>
+            <div class="campo">
+              <label for="r-colaborador">Colaborador</label>
+              <select class="selecao" id="r-colaborador"></select>
+            </div>
+            <div class="campo">
+              <label for="r-status">Status</label>
+              <select class="selecao" id="r-status"></select>
+            </div>
+            <div class="campo">
+              <label for="r-prazo">Prazo</label>
+              <select class="selecao" id="r-prazo"></select>
+            </div>
+            <div class="campo">
+              <label for="r-motivo">Motivo da recusa</label>
+              <select class="selecao" id="r-motivo"></select>
+            </div>
+          </div>
+          <div class="acoes">
+            <button class="btn" type="submit">Gerar relatório</button>
+            <button class="btn" type="button" id="btn-limpar">Limpar filtros</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="cartao">
+        <div id="tabela-resumo"></div>
+      </section>
+
+      <section class="cartao oculto" id="cartao-gerado">
+        <div class="cabecalho-pagina" style="margin-bottom:6px">
+          <h2 class="cartao-titulo" style="margin:0">Situação documental</h2>
+          <span class="texto-suave" id="info-gerado"></span>
+        </div>
+        <div id="tabela-detalhe"></div>
+        <div class="acoes" style="margin-top:16px">
+          <button class="btn" type="button" id="btn-exportar"></button>
+          <button class="btn" type="button" id="btn-alterar">Alterar filtros</button>
+          <button class="btn" type="button" id="btn-imprimir"></button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/dados.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/paginas/relatorios.js"></script>
+</body>
+</html>
